@@ -2,7 +2,8 @@
  * @module ui/main.reel
  */
 var Component = require("montage/ui/component").Component,
-    ExtendedBar = require("logic/extended-bar").ExtendedBar;
+    ExtendedBar = require("logic/extended-bar").ExtendedBar,
+    Foo = require("logic/foo").Foo;
 
 /**
  * @class Main
