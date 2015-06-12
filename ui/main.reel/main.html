@@ -32,20 +32,23 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <p>
-            Alpha is a class.
-            Bravo is a suclass of Alpha.
-            Charlie is a suclass of Bravo.
-            Delta is a suclass of Charlie.
+            Alpha is a class that has a function called <em>doIt()</em> that returns the string "A".
         </p>
         <p>
-            Alpha has a function called <em>doIt()</em> that returns the string "A".
-            Bravo overrides <em>doIt()</em> to call its superclass <em>doIt()</em> and enclose the results in "B" characters.
-            Charlie overrides <em>doIt()</em> to call its superclass <em>doIt()</em> and enclose the results in "C" characters.
-            Delta does not overrides its superclass' <em>doIt()</em>.
+            Bravo is a suclass of Alpha that overrides <em>doIt()</em> to call its superclass
+            <em>doIt()</em> and enclose the results in "B" characters
         </p>
         <p>
-            Calling <em>doIt()</em> on an instance of Delta returns
-            "<span data-montage-id="result"></span>".
+            Charlie is a suclass of Bravo that overrides <em>doIt()</em> to call its superclass
+            <em>doIt()</em> and enclose the results in "C" characters
+        </p>
+        <p>
+            Delta is a suclass of Charlie that does not overrides <em>doIt()</em>.
+        </p>
+        <p>
+            Calling <em>doIt()</em> on an instance of Delta returns "<span data-montage-id="result"></span>".
+        </p>
+        <p>
             It should return "DCBABCD".
         </p>
     </div>
