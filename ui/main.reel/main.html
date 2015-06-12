@@ -33,24 +33,24 @@
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <p>
             <strong>Foo</strong> is a class that has a function
-            called <pre>toString()</pre> that returns the string "Foo".
+            called <code>toString()</code> that returns the string "Foo".
         </p>
         <p>
             <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong>
-            that overrides <em>toString()</em> to call its superclass <em>toString()</em>
+            that overrides <code>toString()</code> to call its superclass <code>toString()</code>
             and prefix it with the string "Extended".
         </p>
         <p>
             <strong>Bar</strong> is a class that has a function
-            called <em>toString()</em> that returns the string "Bar".
+            called <code>toString()</code> that returns the string "Bar".
         </p>
         <p>
             <strong>ExtendedBar</strong> is a suclass of <strong>Bar</strong>
-            that defines its <em>toString()</em> function to point to
-            <strong>ExtendedFoo</strong>'s <em>toString()</em> function.
+            that defines its <code>toString()</code> function to point to
+            <strong>ExtendedFoo</strong>'s <code>toString()</code> function.
         </p>
         <p>
-            <em>ExtendedFoo.prototype.toString.call(new ExtendedBar())</em> returns
+            <code>ExtendedFoo.prototype.toString.call(new ExtendedBar())</code> returns
             "<strong><span data-montage-id="result1"></span></strong>".
         </p>
         <p>
