@@ -20,6 +20,6 @@ var ExtendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# *
     },
 
     toString: {
-        value: ExtendedFoo.prototype.toRope;
+        value: ExtendedFoo.prototype.toRope
     }
 });
