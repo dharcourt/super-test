@@ -11,5 +11,11 @@ exports.Bar = Montage.specialize(/** @lends Bar# */ {
         value: function Bar() {
             this.super();
         }
+    },
+
+    toString: {
+        value: function () {
+            return "Bar";
+        }
     }
 });

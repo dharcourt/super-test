@@ -1,15 +1,20 @@
 /**
  * @module logic/extended-bar
  */
-var Montage = require("montage/core/core").Montage;
+var Bar = require("logic/bar").Bar,
+    ExtendedFoo = require("logic/extended-foo").ExtendedFoo;
 /**
  * @class ExtendedBar
- * @extends Montage
+ * @extends Bar
  */
-exports.ExtendedBar = Montage.specialize(/** @lends ExtendedBar# */ {
+exports.ExtendedBar = Bar.specialize(/** @lends ExtendedBar# */ {
     constructor: {
         value: function ExtendedBar() {
             this.super();
         }
+    },
+
+    toString: {
+        value: ExtendedFoo.prototype.toString
     }
 });
