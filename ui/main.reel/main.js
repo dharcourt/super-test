@@ -26,5 +26,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         get: function () {
             return ExtendedFoo.prototype.toString.call(new ExtendedBar());
         }
+    },
+
+    result3: {
+        get: function () {
+            return ExtendedFoo.prototype.toCord.call(new ExtendedBar());
+        }
     }
 });
