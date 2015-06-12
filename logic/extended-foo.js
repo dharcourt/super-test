@@ -1,12 +1,13 @@
 /**
  * @module logic/extended-foo
  */
-var Foo = require("logic/foo").Foo;
+var Foo = require("logic/foo").Foo,
+    extend = function () { return "Extended" + this.super(); };
 /**
  * @class ExtendedFoo
  * @extends Foo
  */
-var extendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
+exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
     constructor: {
         value: function ExtendedFoo() {
             this.super();
@@ -14,12 +15,10 @@ var extendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# *
     },
 
     toRope: {
-        value: function () {
-            return "Extended" + this.super();
-        }
+        value: extend
     },
 
     toString: {
-        value: extendedFoo.prototype.toRope
+        value: extend
     }
 });
