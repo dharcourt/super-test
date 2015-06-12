@@ -32,29 +32,29 @@
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
         <p>
-            <strong>Alpha</strong> is a class that has a function
-            called <em>doIt()</em> that returns the string "A".
+            <strong>Foo</strong> is a class that has a function
+            called <em>toString()</em> that returns the string "Foo".
         </p>
         <p>
-            <strong>Bravo</strong> is a suclass of <strong>Alpha</strong>
-            that overrides <em>doIt()</em> to call its superclass <em>doIt()</em>
-            and enclose the results in "B" characters
+            <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong>
+            that overrides <em>toString()</em> to call its superclass <em>toString()</em>
+            and prefix it with the string "Extended".
         </p>
         <p>
-            <strong>Charlie</strong> is a suclass of <strong>Bravo</strong>
-            that overrides <em>doIt()</em> to call its superclass <em>doIt()</em>
-            and enclose the results in "C" characters
+            <strong>Bar</strong> is a class that has a function
+            called <em>toString()</em> that returns the string "Bar".
         </p>
         <p>
-            <strong>Delta</strong> is a suclass of <strong>Charlie</strong>
-            that does not overrides <em>doIt()</em>.
+            <strong>ExtendedBar</strong> is a suclass of <strong>Bar</strong>
+            that defines its <em>toString()</em> function to point to
+            <strong>ExtendedFoo</strong>'s <em>toString()</em> function.
         </p>
         <p>
-            Calling <em>doIt()</em> on an instance of Delta returns
+            Calling <em>toString()</em> on an instance of ExtendedBar returns
             "<strong><span data-montage-id="result"></span></strong>".
         </p>
         <p>
-            It should return "<strong>CBABC</strong>".
+            It should return "<strong>ExtendedBar</strong>".
         </p>
     </div>
 </body>
