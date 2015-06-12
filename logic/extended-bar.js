@@ -15,6 +15,8 @@ exports.ExtendedBar = Bar.specialize(/** @lends ExtendedBar# */ {
     },
 
     toString: {
-        value: ExtendedFoo.prototype.toString
+        value: function () {
+            return "Extended" + this.super();
+        }
     }
 });
