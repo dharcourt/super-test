@@ -15,12 +15,10 @@ exports.ExtendedBar = Bar.specialize(/** @lends ExtendedBar# */ {
     },
 
     toString: {
-        value: ExtendedFoo.prototype.toRope
+        value: ExtendedFoo.prototype.toString
     },
 
     toRope: {
-        value: function () {
-            return "Extended" + this.super();
-        }
+        value: ExtendedFoo.prototype.toRope
     }
 });
