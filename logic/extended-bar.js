@@ -16,9 +16,5 @@ exports.ExtendedBar = Bar.specialize(/** @lends ExtendedBar# */ {
 
     toString: {
         value: ExtendedFoo.prototype.toString
-    },
-
-    toRope: {
-        value: ExtendedFoo.prototype.toRope
     }
 });

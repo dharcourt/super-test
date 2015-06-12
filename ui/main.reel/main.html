@@ -39,12 +39,11 @@
         <p>
             <strong>Foo</strong> is a class that has<br>
             a function called <code>toString()</code> that returns the string "FooString", and<br>
-            a function called <code>toRope()</code> that returns the string "FooRope".
+            a second function called <code>toRope()</code> that returns the string "FooRope".
         </p>
         <p>
-            <strong>Bar</strong> is a class that has<br>
-            a function called <code>toString()</code> that returns the string "BarString", and<br>
-            a function called <code>toRope()</code> that returns the string "BarRope".
+            <strong>Bar</strong> is a class that has only<br>
+            a function called <code>toString()</code> that returns the string "BarString".
         </p>
         <p>
             <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong> that overrides<br>
@@ -53,18 +52,18 @@
         </p>
         <p>
             <strong>ExtendedBar</strong> is a suclass of <strong>Bar</strong> that overrides<br>
-            both <code>toString()</code> and <code>toRope()</code> with the same function,<br>
+            <code>toString()</code> with the a function,<br>
             the one used to override <strong>ExtendedFoo</strong>'s <code>toString()</code> and <code>toRope()</code>.
         </p>
         <p>
             <code>new ExtendedFoo().toRope()</code> returns
             "<strong><span data-montage-id="result1"></span></strong>"...
-            it should return "<strong>ExtendedFooRope</strong>"!
+            it should return "<strong>ExtendedFooRope</strong>".
         </p>
         <p>
             <code>ExtendedFoo.prototype.toString.call(new ExtendedBar())</code> returns
             "<strong><span data-montage-id="result2"></span></strong>"...
-            it should return "<strong>ExtendedFooString</strong>"!
+            it should return "<strong>ExtendedFooString</strong>".
         </p>
     </div>
 </body>
