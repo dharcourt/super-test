@@ -4,7 +4,7 @@
 var Foo = require("logic/foo").Foo;
 /**
  * @class ExtendedFoo
- * @extends Montage
+ * @extends Foo
  */
 exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
     constructor: {
