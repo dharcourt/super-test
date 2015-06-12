@@ -6,10 +6,16 @@ var Montage = require("montage/core/core").Montage;
  * @class Bravo
  * @extends Montage
  */
-exports.Bravo = Montage.specialize(/** @lends Bravo# */ {
+exports.Bravo = Alpha.specialize(/** @lends Bravo# */ {
     constructor: {
         value: function Bravo() {
             this.super();
+        }
+    },
+
+    method: {
+        value: function () {
+            return "B";
         }
     }
 });
