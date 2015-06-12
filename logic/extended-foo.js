@@ -6,7 +6,7 @@ var Foo = require("logic/foo").Foo;
  * @class ExtendedFoo
  * @extends Montage
  */
-exports.ExtendedFoo = Montage.specialize(/** @lends ExtendedFoo# */ {
+exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
     constructor: {
         value: function ExtendedFoo() {
             this.super();
