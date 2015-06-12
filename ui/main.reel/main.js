@@ -17,8 +17,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result: {
         get: function () {
-            var extendedBar = new ExtendedBar();
-            return extendedBar.toString();
+            return Foo.prototype.toString.call(new ExtendedBar());
         }
     }
 });
