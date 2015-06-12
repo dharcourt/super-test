@@ -20,9 +20,5 @@ exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
 
     toRope: {
         value: extend
-    },
-
-    toCord: {
-        value: extend
     }
 });
