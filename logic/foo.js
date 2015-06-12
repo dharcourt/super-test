@@ -15,7 +15,7 @@ exports.Foo = Montage.specialize(/** @lends Foo# */ {
 
     toString: {
         value: function () {
-            return "Bar";
+            return "Foo";
         }
     }
 });
