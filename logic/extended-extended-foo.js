@@ -1,15 +1,19 @@
 /**
  * @module logic/extended-extended-foo
  */
-var Montage = require("montage/core/core").Montage;
+var ExtendedFoo = require("logic/extended-foo").ExtendedFoo;
 /**
  * @class ExtendedExtendedFoo
- * @extends Montage
+ * @extends ExtendedFoo
  */
-exports.ExtendedExtendedFoo = Montage.specialize(/** @lends ExtendedExtendedFoo# */ {
+exports.ExtendedExtendedFoo = ExtendedFoo.specialize(/** @lends ExtendedExtendedFoo# */ {
     constructor: {
         value: function ExtendedExtendedFoo() {
             this.super();
         }
+    },
+
+    toString: {
+        value: ExtendedFoo.prototype.toString
     }
 });
