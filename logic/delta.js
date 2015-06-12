@@ -1,7 +1,7 @@
 /**
  * @module logic/delta
  */
-var Montage = require("montage/core/core").Montage;
+var Charlie = require("logic/charlie").Charlie;
 /**
  * @class Delta
  * @extends Montage
@@ -13,9 +13,9 @@ exports.Delta = Charlie.specialize(/** @lends Delta# */ {
         }
     },
 
-    method: {
+    doIt: {
         value: function () {
-            return "D";
+            return "D" + this.super() + "D";
         }
     }
 });

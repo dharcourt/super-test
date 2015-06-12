@@ -2,21 +2,85 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
-                }
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"}
+            }
+        },
+        "result": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "result"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true",
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.result"}
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <p>
+            Alpha is a class.
+            Bravo is a suclass of Alpha.
+            Charlie is a suclass of Bravo.
+            Delta is a suclass of Charlie.
+        </p>
+        <p>
+            Alpha has a method called
+            <em>
+                doIt
+            </em>
+            that returns "A".
+            Bravo overrides
+            <em>
+                doIt
+            </em>
+            to call its superclass
+            <em>
+                doIt
+            </em>
+            and enclose the results in "B".
+            Charlie overrides
+            <em>
+                doIt
+            </em>
+            to call its superclass
+            <em>
+                doIt
+            </em>
+            and enclose the results in "C".
+            Delta overrides
+            <em>
+                doIt
+            </em>
+            to call its superclass
+            <em>
+                doIt
+            </em>
+            and enclose the results in "D".
+        </p>
+        <p>
+            Calling
+            <em>
+                doIt
+            </em>
+            on an instance of Delta returns "
+            <span data-montage-id="result"></span>
+            ".
+            It should return "DCBABCD".
+        </p>
+    </div>
 </body>
 </html>

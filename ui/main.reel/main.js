@@ -1,7 +1,8 @@
 /**
  * @module ui/main.reel
  */
-var Component = require("montage/ui/component").Component;
+var Component = require("montage/ui/component").Component,
+    Delta = require("logic/delta").Delta;
 
 /**
  * @class Main
@@ -11,6 +12,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this.super();
+        }
+    },
+
+    result: {
+        get: function () {
+            var delta = new Delta();
+            return delta.doIt();
         }
     }
 });
