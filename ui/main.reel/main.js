@@ -2,8 +2,7 @@
  * @module ui/main.reel
  */
 var Component = require("montage/ui/component").Component,
-    ExtendedBar = require("logic/extended-bar").ExtendedBar,
-    ExtendedFoo = require("logic/extended-foo").ExtendedFoo;
+    ExtendedExtendedFoo = require("logic/extended-extended-foo").ExtendedExtendedFoo;
 
 /**
  * @class Main
@@ -18,7 +17,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result: {
         get: function () {
-            return ExtendedFoo.prototype.toString.call(new ExtendedBar());
+            return new ExtendedExtendedFoo().toString();
         }
     }
 });
