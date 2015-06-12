@@ -30,6 +30,15 @@
             "bindings": {
                 "value": {"<-": "@owner.result2"}
             }
+                },
+        "result3": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "result3"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.result3"}
+            }
         }
     }
     </script>
@@ -66,8 +75,8 @@
             it should return "<strong>ExtendedFooString</strong>".
         </p>
         <p>
-            <code>ExtendedFoo.prototype.toCord.call(new ExtendedBar())</code> crashes...
-            it should return "<strong>ExtendedFooRope</strong>".
+            On the other hand, <code>ExtendedFoo.prototype.toCord.call(new ExtendedBar())</code> returns
+            "<strong><span data-montage-id="result3"></span></strong>" as it should.
         </p>
     </div>
 </body>
