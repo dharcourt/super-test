@@ -6,7 +6,7 @@ var Foo = require("logic/foo").Foo;
  * @class ExtendedFoo
  * @extends Foo
  */
-var ExtendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
+var extendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
     constructor: {
         value: function ExtendedFoo() {
             this.super();
@@ -20,6 +20,6 @@ var ExtendedFoo = exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# *
     },
 
     toString: {
-        value: ExtendedFoo.prototype.toRope
+        value: extendedFoo.prototype.toRope
     }
 });
