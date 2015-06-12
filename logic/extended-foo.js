@@ -14,11 +14,11 @@ exports.ExtendedFoo = Foo.specialize(/** @lends ExtendedFoo# */ {
         }
     },
 
-    toRope: {
+    toString: {
         value: extend
     },
 
-    toString: {
+    toRope: {
         value: extend
     }
 });
