@@ -50,11 +50,18 @@
             <strong>ExtendedFoo</strong>'s <code>toString()</code> function.
         </p>
         <p>
-            <code>ExtendedFoo.prototype.toString.call(new ExtendedBar())</code> returns
+            <code>new ExtendedFoo().toRope()</code> returns
             "<strong><span data-montage-id="result1"></span></strong>".
         </p>
         <p>
-            It should return "<strong>ExtendedFoo</strong>".
+            It should return "<strong>ExtendedFooRope</strong>".
+        </p>
+        <p>
+            <code>ExtendedFoo.prototype.toString.call(new ExtendedBar())</code> returns
+            "<strong><span data-montage-id="result2"></span></strong>".
+        </p>
+        <p>
+            It should return "<strong>ExtendedFooString</strong>".
         </p>
     </div>
 </body>
