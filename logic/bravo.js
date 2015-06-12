@@ -11,5 +11,11 @@ exports.Bravo = Alpha.specialize(/** @lends Bravo# */ {
         value: function Bravo() {
             this.super();
         }
+    },
+
+    doIt: {
+        value: function () {
+            return "B" + this.super() + "B";
+        }
     }
 });
