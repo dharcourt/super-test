@@ -18,13 +18,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result1: {
         get: function () {
-            return new ExtendedFoo().toString();
+            return new ExtendedFoo().toRope();
         }
     },
 
     result2: {
         get: function () {
-            return ExtendedFoo.prototype.toString(Bar().toString();
+            return ExtendedFoo.prototype.toString.call(new ExtendedBar());
         }
     }
 });
