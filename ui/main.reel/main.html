@@ -38,47 +38,14 @@
             Delta is a suclass of Charlie.
         </p>
         <p>
-            Alpha has a function called
-            <em>
-                doIt()
-            </em>
-            that returns "A".
-            Bravo overrides
-            <em>
-                doIt()
-            </em>
-            to call its superclass
-            <em>
-                doIt()
-            </em>
-            and enclose the results in "B" characters.
-            Charlie overrides
-            <em>
-                doIt()
-            </em>
-            to call its superclass
-            <em>
-                doIt()
-            </em>
-            and enclose the results in "C" characters.
-            Delta overrides
-            <em>
-                doIt()
-            </em>
-            to call its superclass
-            <em>
-                doIt()
-            </em>
-            and enclose the results in "D" characters.
+            Alpha has a function called <em>doIt()</em> that returns the string "A".
+            Bravo overrides <em>doIt()</em> to call its superclass <em>doIt()</em> and enclose the results in "B" characters.
+            Charlie overrides <em>doIt()</em> to call its superclass <em>doIt()</em> and enclose the results in "C" characters.
+            Delta does not overrides its superclass' <em>doIt()</em>.
         </p>
         <p>
-            Calling
-            <em>
-                doIt()
-            </em>
-            on an instance of Delta returns "
-            <span data-montage-id="result"></span>
-            ".
+            Calling <em>doIt()</em> on an instance of Delta returns
+            "<span data-montage-id="result"></span>".
             It should return "DCBABCD".
         </p>
     </div>

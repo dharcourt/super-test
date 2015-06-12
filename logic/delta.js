@@ -11,11 +11,5 @@ exports.Delta = Charlie.specialize(/** @lends Delta# */ {
         value: function Delta() {
             this.super();
         }
-    },
-
-    doIt: {
-        value: function () {
-            return "D" + this.super() + "D";
-        }
     }
 });
