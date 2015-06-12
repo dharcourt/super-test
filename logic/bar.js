@@ -13,9 +13,9 @@ exports.Bar = Montage.specialize(/** @lends Bar# */ {
         }
     },
 
-    toString: {
+    toRope: {
         value: function () {
-            return "BarString";
+            return "BarRope";
         }
     }
 });
