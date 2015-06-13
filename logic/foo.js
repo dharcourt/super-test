@@ -23,11 +23,5 @@ exports.Foo = Montage.specialize(/** @lends Foo# */ {
         value: function () {
             return "FooRope";
         }
-    },
-
-    toCord: {
-        value: function () {
-            return "FooCord";
-        }
     }
 });
