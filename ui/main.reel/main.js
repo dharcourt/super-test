@@ -25,7 +25,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result2: {
         get: function () {
-            return Bravo.prototype.toX.call(new Charlie());
+            return Bravo.prototype.toX.call(new Delta());
         }
     },
 
