@@ -50,7 +50,6 @@
             <ul>
                 <li>a function called <code>toString()</code> that returns the string "FooString"</li>
                 <li>a second function called <code>toRope()</code> that returns the string "FooRope"</li>
-                <li>a third function called <code>toCord()</code> that returns the string "FooCord"</li>
             </ul>
         </p>
         <p>
@@ -63,15 +62,13 @@
             <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong> that:<br>
             <ul>
                 <li>
-                    overrides <code>toString()</code> with a function that calls <code>this.super()</code>
+                    overrides <code>toString()</code> with a function
+                    that calls <code>this.super()</code>
                     and prefixes the results with the string "Extended"
                 </li>
                 <li>
                     overrides <code>toRope()</code> with the same function
                     (literally a pointer to the same function)
-                </li>
-                <li>
-                    does not overrides <code>toCord()</code>
                 </li>
             </ul>
         </p>
@@ -81,9 +78,14 @@
                 <li>
                     overrides <code>toString()</code> with the same function used
                     to override <strong>ExtendedFoo</strong>'s <code>toString()</code>
-                    and <code>toRope()</code>
+                    and <code>toRope()</code> (literally a pointer to the same function)
                 </li>
-            </ul>
+                <li>
+                    overrides <code>toRope()</code> with a function
+                    that calls <code>this.super()</code>
+                    and prefixes the results with the string "X-"
+                </li>
+        </ul>
         </p>
         <p>
             <strong>new ExtendedFoo().toRope()</strong>
