@@ -2,7 +2,7 @@
  * @module logic/bravo
  */
 var Alpha = require("logic/alpha").Alpha,
-    extend = function () { return "B" + this.super(); };
+    extend = function () { return this.super() + "B"; };
 
 /**
  * @class Bravo
