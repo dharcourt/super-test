@@ -83,29 +83,31 @@
                 <li>
                     overrides <code>toRope()</code> with a function
                     that calls <code>this.super()</code>
-                    and prefixes the results with the string "X-"
+                    and prefixes the results with the string "EXTENDED-"
                 </li>
         </ul>
         </p>
         <p>
-            <strong>new ExtendedFoo().toRope()</strong>
+            Calling <strong>new ExtendedFoo().toRope()</strong>:
             <ul>
                 <li>returns "<strong><span data-montage-id="result1"></span></strong>"</li>
                 <li>should return "<strong>ExtendedFooRope</strong>"</li>
             </ul>
         </p>
         <p>
-            <strong>ExtendedFoo.prototype.toString.call(new ExtendedBar())</strong>
+            Calling <strong>ExtendedFoo.prototype.toString.call(new ExtendedBar())</strong>:
             <ul>
                 <li>returns "<strong><span data-montage-id="result2"></span></strong>"</li>
                 <li>should return "<strong>ExtendedFooString</strong>"</li>
             </ul>
         </p>
         <p>
-            <strong>ExtendedFoo.prototype.toCord.call(new ExtendedBar())</strong>
+            Calling <strong>new ExtendedFoo().toString()</strong>:
             <ul>
+                <li>after calling <code>new ExtendedFoo().toString()</code>"</li>
+                <li>then setting <code>ExtendedFoo.prototype.toString</code> to <code>ExtendedBar.prototype.toString</code></li>
                 <li>returns "<strong><span data-montage-id="result3"></span></strong>"</li>
-                <li>should return "<strong>FooCord</strong>"</li>
+                <li>should return "<strong>EXTENDED-FooString</strong>"</li>
             </ul>
         </p>
     </div>
