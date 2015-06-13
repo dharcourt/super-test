@@ -49,10 +49,10 @@
             <strong>Alpha</strong> is a class that has:<br>
             <ul>
                 <li>
-                    a function called <code>toX()</code> that returns the string "AX"
+                    a function called <code>toX()</code> that returns the string "XA"
                 </li>
                 <li>
-                    a second function called <code>toY()</code> that returns the string "AY"
+                    a second function called <code>toY()</code> that returns the string "YA"
                 </li>
             </ul>
         </p>
@@ -62,7 +62,7 @@
                 <li>
                     overrides <code>toX()</code> with a function
                     that calls <code>this.super()</code>
-                    and prefixes the results with the string "B"
+                    and appends the string "B" to the results
                 </li>
                 <li>
                     overrides <code>toY()</code> with the same function
@@ -84,31 +84,49 @@
                 <li>
                     overrides <code>toX()</code> with a function
                     that calls <code>this.super()</code>
-                    and prefixes the results with the string "D"
+                    and appends the string "D" to the results
                 </li>
             </ul>
         </p>
         <p>
-            Calling <strong>new ExtendedFoo().toRope()</strong>:
+            <strong>Issue 1, invalid heuristic part 1</strong>: Calling <code>new Bravo().toY()</code>:
             <ul>
-                <li>returns "<strong><span data-montage-id="result1"></span></strong>"</li>
-                <li>should return "<strong>ExtendedFooRope</strong>"</li>
+                <li>
+                    should return "<strong>YAB</strong>"
+                </li>
+                <li>
+                    returns "<strong><span data-montage-id="result1"></span></strong>"
+                </li>
             </ul>
         </p>
         <p>
-            Calling <strong>ExtendedFoo.prototype.toString.call(new ExtendedBar())</strong>:
+            <strong>Issue 2, invalid heuristic part 2</strong>: Calling <code>Bravo.prototype.toX.call(new Delta())</code>:
             <ul>
-                <li>returns "<strong><span data-montage-id="result2"></span></strong>"</li>
-                <li>should return "<strong>ExtendedFooString</strong>"</li>
+                <li>
+                    should return "<strong>XAB</strong>"
+                </li>
+                <li>
+                    returns "<strong><span data-montage-id="result2"></span></strong>"
+                </li>
             </ul>
         </p>
         <p>
-            Calling <strong>new ExtendedFoo().toString()</strong>:
+            <strong>Issue 2, invalid caching</strong>: Calling <code>new Delta().toX()</code>:
             <ul>
-                <li>after calling <code>new ExtendedFoo().toString()</code>"</li>
-                <li>then setting <code>ExtendedFoo.prototype.toString</code> to <code>ExtendedBar.prototype.toRope</code></li>
-                <li>returns "<strong><span data-montage-id="result3"></span></strong>"</li>
-                <li>should return "<strong>EXTENDED-FooString</strong>"</li>
+                <li>
+                    after calling <code>new Delta().toX()</code> once
+                </li>
+                <li>
+                    then setting <code>Charlie.prototype.toX</code> to a function
+                    that calls <code>this.super()</code>
+                    and appends the string "C" to the results
+                </li>
+                <li>
+                    should return "<strong>XABCD</strong>"
+                </li>
+                <li>
+                    returns "<strong><span data-montage-id="result3"></span></strong>"
+                </li>
             </ul>
         </p>
     </div>
