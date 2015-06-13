@@ -60,14 +60,20 @@
             </ul>
         </p>
         <p>
-            <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong> that overrides:<br>
+            <strong>ExtendedFoo</strong> is a suclass of <strong>Foo</strong> that:<br>
             <ul>
-                <li><code>toString()</code></li>
-                <li><code>toRope()</code></li>
+                <li>
+                    overrides <code>toString()</code> with a function that calls <code>this.super()</code>
+                    and prefixes the results with the string "Extended"
+                </li>
+                <li>
+                    overrides <code>toRope()</code> with the same function
+                    (literally a pointer to the same function)
+                </li>
+                <li>
+                    does not overrides <code>toCord()</code>
+                </li>
             </ul>
-            with the same function, a function that calls <code>this.super()</code>
-            and prefixes the results with the string "Extended".<br>
-            It does not override <code>toCord</code>.
         </p>
         <p>
             <strong>ExtendedBar</strong> is a suclass of <strong>Bar</strong> that overrides<br>
