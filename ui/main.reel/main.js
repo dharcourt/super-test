@@ -3,6 +3,7 @@
  */
 var Component = require("montage/ui/component").Component,
     Bravo = require("logic/bravo").Bravo,
+    Charlie = require("logic/charlie").Charlie,
     Delta = require("logic/delta").Delta;
 
 /**
