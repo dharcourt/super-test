@@ -1,12 +1,12 @@
 /**
  * @module logic/bravo
  */
-var Montage = require("montage/core/core").Montage;
+var Alpha = require("logic/alpha").Alpha;
 /**
  * @class Bravo
- * @extends Montage
+ * @extends Alpha
  */
-exports.Bravo = Montage.specialize(/** @lends Bravo# */ {
+exports.Bravo = Alpha.specialize(/** @lends Bravo# */ {
     constructor: {
         value: function Bravo() {
             this.super();
