@@ -1,8 +1,7 @@
 /**
  * @module logic/delta
  */
-var Charlie = require("logic/charlie").Charlie,
-    extend = function () { return "D" + this.super(); };
+var Charlie = require("logic/charlie").Charlie;
 
 /**
  * @class Delta
@@ -16,10 +15,8 @@ exports.Delta = Charlie.specialize(/** @lends Delta# */ {
     },
 
     toX: {
-        value: extend
-    },
-
-    toY: {
-        value: extend
+        value: function () {
+            return "D" + this.super();
+        }
     }
 });
