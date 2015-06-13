@@ -32,7 +32,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     result3: {
         get: function () {
             var x = new Delta().toX();
-            Charlie.prototype.toX = function() { return "C" + this.super(); };
+            Charlie.prototype.toX = function() { return this.super() + "C"; };
             return new Delta().toX();
         }
     }
