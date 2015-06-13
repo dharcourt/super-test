@@ -2,8 +2,7 @@
  * @module ui/main.reel
  */
 var Component = require("montage/ui/component").Component,
-    ExtendedBar = require("logic/extended-bar").ExtendedBar,
-    ExtendedFoo = require("logic/extended-foo").ExtendedFoo;
+    Delta = require("logic/delta").Delta;
 
 /**
  * @class Main
@@ -18,7 +17,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result1: {
         get: function () {
-            return new ExtendedFoo().toRope();
+            return new Delta().y;
         }
     },
 

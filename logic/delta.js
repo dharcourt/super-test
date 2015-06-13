@@ -16,10 +16,10 @@ exports.Delta = Charlie.specialize(/** @lends Delta# */ {
     },
 
     x: {
-        value: extend
+        get: extend
     },
 
     y: {
-        value: extend
+        get: extend
     }
 });

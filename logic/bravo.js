@@ -3,6 +3,7 @@
  */
 var Alpha = require("logic/alpha").Alpha,
     extend = function () { return "B" + this.super(); };
+
 /**
  * @class Bravo
  * @extends Alpha
@@ -15,10 +16,10 @@ exports.Bravo = Alpha.specialize(/** @lends Bravo# */ {
     },
 
     x: {
-        value: extend
+        get: extend
     },
 
     y: {
-        value: extend
+        get: extend
     }
 });

@@ -15,13 +15,13 @@ exports.Alpha = Montage.specialize(/** @lends Alpha# */ {
     },
 
     x: {
-        value: function () {
+        get: function () {
             return "AX";
         }
     },
 
     y: {
-        value: function () {
+        get: function () {
             return "AY";
         }
     }
