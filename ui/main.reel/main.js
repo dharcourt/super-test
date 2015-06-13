@@ -29,10 +29,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result3: {
         get: function () {
-            var foo = new ExtendedFoo(),
-                string = foo.toString();
-            ExtendedFoo.prototype.toString = ExtendedBar.prototype.toRope
-            return foo.toString();
+            var x = new Delta().toX();
+            Charlie.prototype.toX = function() { return "C" + this.super(); };
+            return new Delta().toX();
         }
     }
 });
