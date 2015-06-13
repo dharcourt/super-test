@@ -17,7 +17,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result1: {
         get: function () {
-            return new Delta().y;
+            return new Delta().toY();
         }
     },
 
