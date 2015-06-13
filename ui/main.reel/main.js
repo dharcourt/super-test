@@ -2,6 +2,7 @@
  * @module ui/main.reel
  */
 var Component = require("montage/ui/component").Component,
+    Bravo = require("logic/bravo").Bravo,
     Delta = require("logic/delta").Delta;
 
 /**
