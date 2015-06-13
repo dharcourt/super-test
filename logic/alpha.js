@@ -11,5 +11,17 @@ exports.Alpha = Montage.specialize(/** @lends Alpha# */ {
         value: function Alpha() {
             this.super();
         }
+    },
+
+    x: {
+        value: function () {
+            return "AX";
+        }
+    },
+
+    y: {
+        value: function () {
+            return "AY";
+        }
     }
 });
