@@ -23,7 +23,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result2: {
         get: function () {
-            return ExtendedFoo.prototype.toString.call(new ExtendedBar());
+            return Bravo.prototype.x.call(new ExtendedBar());
         }
     },
 
