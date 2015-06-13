@@ -30,7 +30,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result3: {
         get: function () {
-            var foo = newExtendedFoo(),
+            var foo = new ExtendedFoo(),
                 string = foo.toString();
             ExtendedFoo.prototype.toString = ExtendedBar.prototype.toRope
             return foo.toString();
