@@ -2,6 +2,7 @@
  * @module logic/alpha
  */
 var Montage = require("montage/core/core").Montage;
+
 /**
  * @class Alpha
  * @extends Montage

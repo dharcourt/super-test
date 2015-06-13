@@ -2,6 +2,7 @@
  * @module logic/charlie
  */
 var Bravo = require("logic/bravo").Bravo;
+
 /**
  * @class Charlie
  * @extends Bravo
