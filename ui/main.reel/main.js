@@ -30,9 +30,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
     result3: {
         get: function () {
-            var fooString = new ExtendedFoo().toString();
+            var foo = newExtendedFoo(),
+                string = foo.toString();
             ExtendedFoo.prototype.toString = ExtendedBar.prototype.toRope
-            return new ExtendedFoo().toString();
+            return foo.toString();
         }
     }
 });
